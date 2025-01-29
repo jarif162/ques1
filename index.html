@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style type="text/tailwindcss">
+      @layer components {
+        .btn {
+          @apply bg-orange-500 rounded-xl hover:bg-orange-700 text-white px-4 py-2;
+        }
+      }
+    </style>
+  </head>
+
+  <body class="bg-gray-800">
+    <div class="container mx-auto text-center">
+      <h1 class="text-4xl font-bold text-white my-10">search for your Drink</h1>
+      <div
+        class="bg-white w-1/2 mx-auto border rounded-xl flex justify-between gap-2"
+      >
+        <input
+          type="text"
+          placeholder="Drink"
+          class="p-4 w-full rounded-xl border-transparent"
+          id="input"
+        />
+        <button class="btn" id="search">Search</button>
+      </div>
+    </div>
+
+    <div
+      class="container mx-auto border border-gray-600 min-h-[900px] rounded-xl mt-5 p-4"
+    >
+      <h2
+        id="noDrink"
+        class="text-gray-300 text-center text-4xl mt-16 font-semibold capitalize"
+      >
+        No Drink to show
+      </h2>
+      <div class="meal-wrapper grid grid-cols-4 gap-5"></div>
+    </div>
+
+    <div>
+      <div class="flex items-center justify-center min-h-screen">
+        <div
+          id="details"
+          class="overlay fixed top-0 left-0 w-full h-full flex items-center justify-center bg-[#0000005e] invisible"
+        ></div>
+      </div>
+    </div>
+  </body>
+  <script src="app.js"></script>
+</html>
