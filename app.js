@@ -44,7 +44,7 @@ function showDrink(drink) {
 
                     <div class="my-4">
                     <a href=${
-                      drinks.strVideo
+                      drink.strVideo ?? "#"
                     } target="_blank" class="btn">Watch</a>
                     <button class="px-3 text-white" onclick="lookUpDetails('${
                       drinks.idDrink
@@ -76,7 +76,7 @@ function showDrinkDetails(drink) {
           <h2 class="text-2xl font-bold mb-4">${drink.strDrink}</h2>
           <p class="mb-6">${drink.strInstructions}</p>
           <a href="${
-            drink.strVideo ? drink.strVideo : "#"
+            drink.strVideo ?? "#"
           }" target="_blank" class="px-4 bg-blue-500 hover:bg-blue-600">Watch</a>
           <button onclick="closeDetails()">Close</button>
       </div>
